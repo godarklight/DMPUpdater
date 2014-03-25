@@ -10,3 +10,5 @@ If it doesn't find a "-version" part in the filename, it will default to using t
   
 To switch it to the version, rename the executable to KMPUpdater-version.exe,  
 where version is one of the versions listed in http://godarklight.kerbalcentral.com:82/kmp/updater/index.txt  
+  
+This program takes one command line option: --batch or -b, which will make it exit without asking.  

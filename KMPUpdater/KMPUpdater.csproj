@@ -43,9 +43,8 @@
     <MonoDevelop>
       <Properties>
         <Policies>
-          <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="text/plain" />
+          <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/plain" />
           <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml" />
-          <CSharpFormattingPolicy inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
           <NameConventionPolicy>
             <Rules>
               <NamingRule Name="Namespaces" AffectedEntity="Namespace" VisibilityMask="VisibilityMask" NamingStyle="PascalCase" IncludeInstanceMembers="True" IncludeStaticEntities="True" />
