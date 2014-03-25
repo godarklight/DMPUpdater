@@ -43,7 +43,7 @@ namespace KMPUpdater
                 Console.WriteLine("Updating server");
                 updateType = "server";
             }
-            if (Directory.Exists(Path.Combine(applicationDirectory, "KSP_Data")))
+            if (File.Exists(Path.Combine(applicationDirectory, "KSP.exe")) || File.Exists(Path.Combine(applicationDirectory, "KSP.app")) || File.Exists(Path.Combine(applicationDirectory, "KSP.x86")))
             {
                 Console.WriteLine("Updating client");
                 updateType = "client";
