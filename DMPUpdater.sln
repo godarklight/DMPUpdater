@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMPUpdater", "KMPUpdater\KMPUpdater.csproj", "{0DD1EDF1-C3CB-4133-ABFB-30C0F6072655}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMPUpdater", "DMPUpdater\DMPUpdater.csproj", "{0DD1EDF1-C3CB-4133-ABFB-30C0F6072655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,7 +15,7 @@ Global
 		{0DD1EDF1-C3CB-4133-ABFB-30C0F6072655}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = KMPUpdater\KMPUpdater.csproj
+		StartupItem = DMPUpdater\DMPUpdater.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = VisualStudio

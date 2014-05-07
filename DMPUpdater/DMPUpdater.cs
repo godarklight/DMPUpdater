@@ -4,11 +4,11 @@ using System.Text;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace KMPUpdater
+namespace DMPUpdater
 {
-    class KMPUpdater
+    class DMPUpdater
     {
-        private const string DEFAULT_UPDATER_ADDRESS = "http://godarklight.kerbalcentral.com:82/kmp/updater/";
+        private const string DEFAULT_UPDATER_ADDRESS = "http://chrisand.no-ip.info/dmp/updater/";
         private static string mode;
         private static string updateType;
         private static string throwError;
@@ -29,7 +29,7 @@ namespace KMPUpdater
             if (!SetMode())
             {
                 Console.WriteLine("Badly formatted version.");
-                Console.WriteLine("File name should be KMPUpdater-(version).exe");
+                Console.WriteLine("File name should be DMPUpdater-(version).exe");
                 AskToExitIfInteractive();
                 return 1;
             }
@@ -38,22 +38,22 @@ namespace KMPUpdater
                 Console.WriteLine("Using the " + mode + " version");
             }
             updateType = "";
-            if (File.Exists(Path.Combine(applicationDirectory, "KMPServer.exe")) && !Directory.Exists(Path.Combine(applicationDirectory, "KSP_Data")))
+            if (File.Exists(Path.Combine(applicationDirectory, "DMPServer.exe")))
             {
-                Console.WriteLine("Updating server");
                 updateType = "server";
             }
-            if (File.Exists(Path.Combine(applicationDirectory, "KSP.exe")) || File.Exists(Path.Combine(applicationDirectory, "KSP.app")) || File.Exists(Path.Combine(applicationDirectory, "KSP.x86")))
+            if (File.Exists(Path.Combine(applicationDirectory, "KSP.exe")) || Directory.Exists(Path.Combine(applicationDirectory, "KSP.app")) || File.Exists(Path.Combine(applicationDirectory, "KSP.x86")))
             {
-                Console.WriteLine("Updating client");
                 updateType = "client";
             }
             if (updateType == "")
             {
-                Console.WriteLine("Place KMPUpdater next to KSP.exe or KMPServer.exe");
+                Console.WriteLine("Cannot find client or server in: " + applicationDirectory);
+                Console.WriteLine("Place DMPUpdater next to KSP.exe or DMPServer.exe");
                 AskToExitIfInteractive();
                 return 2;
             }
+            Console.WriteLine("Updating " + updateType);
             Console.Write("Downloading version index...");
             if (!GetVersionIndex())
             {
@@ -101,7 +101,7 @@ namespace KMPUpdater
                 AskToExitIfInteractive();
                 return 6;
             }
-            Console.WriteLine("Your KMP " + updateType + " is up to date!");
+            Console.WriteLine("Your DMP " + updateType + " is up to date!");
             AskToExitIfInteractive();
             return 0;
         }
@@ -121,7 +121,7 @@ namespace KMPUpdater
             string exeName = AppDomain.CurrentDomain.FriendlyName;
             if (!exeName.Contains("-") || !exeName.Contains(".exe"))
             {
-                if (exeName == "KMPUpdater.exe")
+                if (exeName == "DMPUpdater.exe")
                 {
                     mode = "release";
                 }
