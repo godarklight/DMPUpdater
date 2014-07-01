@@ -9,6 +9,6 @@ This program uses sha256sum indexes, so it will only download files that have ch
 If it doesn't find a "-version" part in the filename, it will default to using the release version.  
   
 To switch it to the version, rename the executable to DMPUpdater-version.exe,  
-where version is one of the versions listed in http://chrisand.no-ip.info/dmp/updater/index.txt  
+where version is one of the versions listed in http://godarklight.info.tm/dmp/updater/index.txt  
   
 This program takes one command line option: --batch or -b, which will make it exit without asking.  

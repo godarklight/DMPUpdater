@@ -8,7 +8,7 @@ namespace DMPUpdater
 {
     class DMPUpdater
     {
-        private const string DEFAULT_UPDATER_ADDRESS = "http://chrisand.no-ip.info/dmp/updater/";
+        private const string DEFAULT_UPDATER_ADDRESS = "http://godarklight.info.tm/dmp/updater/";
         private static string mode;
         private static string updateType;
         private static string throwError;
