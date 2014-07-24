@@ -42,7 +42,7 @@ namespace DMPUpdater
             {
                 updateType = "server";
             }
-            if (File.Exists(Path.Combine(applicationDirectory, "KSP.exe")) || Directory.Exists(Path.Combine(applicationDirectory, "KSP.app")) || File.Exists(Path.Combine(applicationDirectory, "KSP.x86")))
+            if (File.Exists(Path.Combine(applicationDirectory, "KSP.exe")) || File.Exists(Path.Combine(applicationDirectory, "KSP_x64.exe")) || Directory.Exists(Path.Combine(applicationDirectory, "KSP.app")) || File.Exists(Path.Combine(applicationDirectory, "KSP.x86")))
             {
                 updateType = "client";
             }
