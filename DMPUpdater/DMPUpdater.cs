@@ -8,7 +8,7 @@ namespace DMPUpdater
 {
     class DMPUpdater
     {
-        private const string DEFAULT_UPDATER_ADDRESS = "http://godarklight.info.tm/dmp/updater/";
+        private const string DEFAULT_UPDATER_ADDRESS = "https://godarklight.privatedns.org/dmp/updater/";
         private static string mode;
         private static string updateType;
         private static string throwError;
@@ -41,6 +41,10 @@ namespace DMPUpdater
             if (File.Exists(Path.Combine(applicationDirectory, "DMPServer.exe")))
             {
                 updateType = "server";
+            }
+            if (File.Exists(Path.Combine(applicationDirectory, "DMPServerListReporter-dotnet.dll")))
+            {
+                updateType = "server-dotnet";
             }
             if (File.Exists(Path.Combine(applicationDirectory, "KSP.exe")) || File.Exists(Path.Combine(applicationDirectory, "KSP_x64.exe")) || Directory.Exists(Path.Combine(applicationDirectory, "KSP.app")) || File.Exists(Path.Combine(applicationDirectory, "KSP.x86")))
             {
@@ -151,7 +155,7 @@ namespace DMPUpdater
         #endregion
         #region Download indexes
         private static bool GetVersionIndex()
-        { 
+        {
             try
             {
                 using (WebClient wc = new WebClient())
@@ -168,7 +172,7 @@ namespace DMPUpdater
         }
 
         private static bool GetFileIndex()
-        { 
+        {
             try
             {
                 using (WebClient wc = new WebClient())
@@ -207,7 +211,7 @@ namespace DMPUpdater
                         }
                         else
                         {
-                            Console.WriteLine(" done!"); 
+                            Console.WriteLine(" done!");
                         }
 
                     }
